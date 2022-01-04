@@ -32,8 +32,11 @@ const Entry = ({ data, onClick }) => {
             }}>
             <a className={`py-4 flex flex-col items-center relative ${detailVisible ? "scale-110" : ""} transition-transform duration-700 ease-out cursor-pointer`}>
                 <p className="text-xs text-center text-slate-700 h-8">{truncate(name.toUpperCase(), {length:80})}</p>
-                <Image src={FlowerImg} width="150" height="150" loading="lazy" className="flex-grow w-full"/>
-                <p className="text-sm font-semibold mt-1">{data.attributes.ageValue}, {t(data.attributes.gender)}</p>
+                <div className="px-6 py-2">
+                {data.attributes.detail && data.attributes.detail.photo ? (<Image src={data.attributes.detail.photo} width="150" height="150" loading="lazy" className="flex-grow w-full grayscale rounded-full object-cover"/>) 
+                    : (<Image src={FlowerImg} width="150" height="150" loading="lazy" className="flex-grow w-full"/>)}
+                </div>
+                <p className="text-sm font-semibold">{data.attributes.ageValue}, {t(data.attributes.gender)}</p>
                 <p className="text-xs font-semibold text-center">{t('place', {place: truncate(data.attributes.city, {length:15})})}</p>
                 <p className="text-xs">{intl.formatDateTime(new Date(data.attributes.deathDate), {dateStyle: "medium"})}</p>
             </a>

@@ -1,6 +1,6 @@
 import { useReducer, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/dist/client/router";
 import { useTranslations } from "use-intl";
 import { event } from "../utils/gtag";
