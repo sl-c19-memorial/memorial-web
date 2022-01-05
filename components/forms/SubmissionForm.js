@@ -170,7 +170,7 @@ const SubmissionForm = () => {
                                     <span className="label-text">{t('displayName_label')}<RequiredMark /></span>
                                     <input {...register("displayName", { required: false })}
                                         className={`checkbox ${errors.displayName ? "input-error" : ""}`}
-                                        type="checkbox" />
+                                        type="checkbox" checked="yes"/>
                                 </label>
                             </div>
                             <div className="form-control">
