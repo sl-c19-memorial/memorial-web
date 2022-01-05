@@ -34,9 +34,9 @@ const Overlay = ({ id, close }) => {
                         </div>
                         <div className={`flex flex-col items-center relative py-4`}>
                             {data.data.attributes.detail && data.data.attributes.detail.name ? (<p className=" text-ms font-bold py-4">{data.data.attributes.detail.name}</p>) : []}
-                            {data.data.attributes.detail && data.data.attributes.detail.photo ? (<img src={data.data.attributes.detail.photo} className="grayscale w-1/2 p-2" />) :
+                            {data.data.attributes.detail && data.data.attributes.detail.photo ? (<Image src={data.data.attributes.detail.photo} width="150" height="150" loading="lazy" className="w-3/5 rounded-full object-cover"/>) :
                                 (<Image src={FlowerImg} width="150" height="150" loading="lazy" className="flex-grow w-full" />)}
-                            <p className="text-sm font-semibold mt-1">{data.data.attributes.ageValue}, {t(data.data.attributes.gender)}</p>
+                            <p className="text-sm font-semibold mt-2">{data.data.attributes.ageValue}, {t(data.data.attributes.gender)}</p>
                             <p className="text-xs font-semibold">{t('place', { place: data.data.attributes.city })}</p>
                             <p className="text-xs">{intl.formatDateTime(new Date(data.data.attributes.deathDate), { dateStyle: "medium" })}</p>
                         </div>
