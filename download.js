@@ -55,7 +55,7 @@ async function fetchData(){
 
   const rawKeyData = await request({
     'method': 'GET',
-    'url': 'https://raw.githubusercontent.com/kaveenr/covid19-memorial-lk-data/data/data/user_keys_latest.json',
+    'url': 'https://raw.githubusercontent.com/sl-c19-memorial/memorial-dataset/data/data/user_keys_latest.json',
   }).catch((e)=> {
     throw Error("Unable to fetch vax centers");
   }).then((response) => (JSON.parse(response.body)));
