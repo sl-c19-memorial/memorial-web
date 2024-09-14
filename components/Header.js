@@ -38,16 +38,16 @@ const NavBar = () => {
     return (
         <ul className="flex flex-col lg:flex-row text-left lg:text-center container mx-auto font-bold">
             <li key={"0"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/about" legacyBehavior>{t('about')}</Link></a>
+                <Link href="/[slug]" as="/about" legacyBehavior><a className="hover:underline">{t('about')}</a></Link>
             </li>
             <li key={"1"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/approach" legacyBehavior>{t('approach')}</Link></a>
+                <Link href="/[slug]" as="/approach" legacyBehavior><a className="hover:underline">{t('approach')}</a></Link>
             </li>
             <li key={"2"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/submit" legacyBehavior>{t('submit')}</Link></a>
+                <Link href="/[slug]" as="/submit" legacyBehavior><a className="hover:underline">{t('submit')}</a></Link>
             </li>
             <li key={"3"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/contact" legacyBehavior>{t('contact')}</Link></a>
+                <Link href="/[slug]" as="/contact" legacyBehavior><a className="hover:underline">{t('contact')}</a></Link>
             </li>
         </ul>
     );
