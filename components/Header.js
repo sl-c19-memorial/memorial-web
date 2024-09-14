@@ -38,16 +38,16 @@ const NavBar = () => {
     return (
         <ul className="flex flex-col lg:flex-row text-left lg:text-center container mx-auto font-bold">
             <li key={"0"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/about">{t('about')}</Link></a>
+                <a className="hover:underline"><Link href="/[slug]" as="/about" legacyBehavior>{t('about')}</Link></a>
             </li>
             <li key={"1"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/approach">{t('approach')}</Link></a>
+                <a className="hover:underline"><Link href="/[slug]" as="/approach" legacyBehavior>{t('approach')}</Link></a>
             </li>
             <li key={"2"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/submit">{t('submit')}</Link></a>
+                <a className="hover:underline"><Link href="/[slug]" as="/submit" legacyBehavior>{t('submit')}</Link></a>
             </li>
             <li key={"3"} className="flex-grow py-2 lg:py-3 mr-6" >
-                <a className="hover:underline"><Link href="/[slug]" as="/contact">{t('contact')}</Link></a>
+                <a className="hover:underline"><Link href="/[slug]" as="/contact" legacyBehavior>{t('contact')}</Link></a>
             </li>
         </ul>
     );
@@ -74,7 +74,7 @@ const Header = ({ sub }) => {
         return sub ? `${t("seoTitle")} - ${nt(sub)}`: t("seoTitle")
     }
 
-    return (<>
+    return <>
         <header className="bg-base-100 sticky top-0 z-30">
             <Head>
                 <title>{getTitle()}</title>
@@ -96,10 +96,10 @@ const Header = ({ sub }) => {
             <div className="flex h-full container lg:w-kw mx-auto px-4 py-3 pt-6 lg:pt-8 lg:content-end">
                 <div className="flex-grow flex flex-wrap mx-1">
                     <Link href="/">
-                        <a>
-                            <p className={"text-base"}>{t('title')}</p>
-                            <p className={"text-xs md:text-base font-semibold"}>{t('subtitle')}</p>
-                        </a>
+
+                        <p className={"text-base"}>{t('title')}</p>
+                        <p className={"text-xs md:text-base font-semibold"}>{t('subtitle')}</p>
+
                     </Link>
                 </div>
                 <div className="flex-grow-0 flex flex-wrap content-center hidden lg:block">
@@ -143,7 +143,7 @@ const Header = ({ sub }) => {
                 <NavBar/>
             </nav>
         </header>
-    </>);
+    </>;
 }
 
 export default Header;
