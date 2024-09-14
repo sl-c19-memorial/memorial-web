@@ -1,5 +1,5 @@
 module.exports = {
-    target: "serverless",
+    output: "standalone",
     i18n: {
         locales: ['en', 'si', 'ta'],
         defaultLocale: 'en',
