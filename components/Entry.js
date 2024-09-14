@@ -1,5 +1,5 @@
 import { truncate } from "lodash";
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { useState } from "react";
 import { useIntl, useTranslations } from "use-intl";
 import FlowerImg from '../public/img/icon.png'

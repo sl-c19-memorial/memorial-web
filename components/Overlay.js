@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { useIntl, useTranslations } from "use-intl";
 import FlowerImg from '../public/img/icon.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
